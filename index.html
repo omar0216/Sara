@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sara</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section hero-bg min-h-screen flex items-center justify-center relative px-6 py-12 lg:px-20 overflow-hidden">
+
+    <div class="absolute top-10 left-10 w-64 h-64 bg-white opacity-20 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-200 opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="container mx-auto max-w-6xl z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+
+        <!-- Columna Izquierda: Imagen -->
+        <div class="w-full lg:w-5/12 flex justify-center lg:justify-end order-1 fade-in-up">
+          <div class="image-container relative w-64 md:w-80 lg:w-[400px] aspect-[3/4]">
+            <div class="image-glow"></div>
+            <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?q=80&w=1888&auto=format&fit=crop" alt="Retrato de Sara" class="w-full h-full object-cover rounded-3xl bg-pink-100 shadow-xl">
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Texto -->
+        <div class="w-full lg:w-7/12 text-center lg:text-left order-2">
+          <p class="fade-in-up delay-100 font-serif italic text-lg md:text-xl text-rose-500 mb-2 md:mb-4 tracking-wide">
+            Ella es...
+          </p>
+          <h1 class="fade-in-up delay-200 font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-2 leading-tight">
+            Sara<br class="hidden lg:block" />
+          </h1>
+
+          <h3 class="fade-in-up delay-200 font-sans text-lg md:text-2xl text-rose-400 font-light mb-8 italic">
+            Alias Sarita, Saris, ooo mi favorito: <span class="font-semibold text-rose-500">Bobita</span> 🙃
+          </h3>
+
+          <div class="fade-in-up delay-300 relative inline-block lg:block">
+            <div class="hidden lg:block absolute left-0 top-1 bottom-1 w-1 bg-rose-300 rounded-full opacity-60"></div>
+            <p class="font-sans text-gray-600 text-lg md:text-xl lg:text-2xl leading-relaxed lg:pl-6 max-w-lg mx-auto lg:mx-0">
+              Un alma que encuentra magia en los días nublados y convierte el café de la mañana en un ritual de alegría.
+              <span class="block mt-2 text-rose-400 font-serif italic">Su presencia hace que el mundo gire un poco más despacio.</span>
+            </p>
+          </div>
+
+          <div class="fade-in-up delay-300 mt-10">
+            <button onclick="document.getElementById('identidad').scrollIntoView({behavior: 'smooth'})" class="group relative px-6 py-3 font-sans font-medium text-gray-600 transition-colors hover:text-rose-600 focus:outline-none">
+              <span class="relative z-10 flex items-center gap-2">
+                Vamos a conocerla mejor
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rose-300 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN DE IDENTIDAD ================= -->
+  <section id="identidad" class="py-24 bg-[#fffbf0] relative overflow-hidden">
+
+    <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-rose-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 pointer-events-none transform -translate-x-1/2 translate-y-1/2"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Quiero que la conozcan, <br class="md:hidden"> <span class="italic text-rose-500">así como yo</span>
+        </h2>
+        <div class="w-16 h-1 bg-rose-300 mx-auto rounded-full opacity-60 mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- 1. Nombre -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Nombre Completo</span>
+          <h3 class="font-serif text-2xl lg:text-3xl text-gray-800 leading-tight">Sara Gabriela Gallego Sánchez</h3>
+        </div>
+        <!-- 2. Fecha -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center delay-100">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Fecha de Nacimiento</span>
+          <h3 class="font-serif text-2xl lg:text-3xl text-gray-800 leading-tight">16 de febrero de 2009 <span class="text-xl">🎂</span></h3>
+        </div>
+        <!-- 3. Bogotá -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center delay-200">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Nació en</span>
+          <h3 class="font-serif text-2xl lg:text-3xl text-gray-800 leading-tight">Bogotá, <span class="italic text-gray-400 font-light">Col</span></h3>
+        </div>
+        <!-- 4. Medellín -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center delay-200">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Pero vive en...</span>
+          <h3 class="font-serif text-2xl lg:text-3xl text-gray-800 leading-tight">Medellín, <span class="italic text-gray-400 font-light">Col</span></h3>
+        </div>
+        <!-- 5. Estudios -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center delay-300">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Futura</span>
+          <h3 class="font-serif text-2xl lg:text-3xl text-gray-800 leading-tight">Ingeniera Aeroespacial <span class="text-xl">🚀</span></h3>
+        </div>
+        <!-- 6. Color -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Su Color Favorito</span>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-pink-200 border-4 border-white shadow-md"></div>
+            <h3 class="font-serif text-2xl text-gray-800">Rosa</h3>
+          </div>
+        </div>
+        <!-- 7. Definición -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center md:col-span-2 transition-delay-100">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Cómo es ella</span>
+          <h3 class="font-serif text-2xl text-gray-800 italic leading-relaxed">Tiene una mente brillante y una energía inquieta. Piensa mucho, se exige bastante y quiere solucionar todo de inmediato. A veces eso la estresa, pero también es parte de lo que la hace tan capaz y tan ella.</h3>
+        </div>
+        <!-- 8. Risa -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Siempre se ríe de</span>
+          <h3 class="font-serif text-2xl text-gray-800">Mis chistes malos <span class="text-xl">😅</span></h3>
+        </div>
+        <!-- 9. Ama hacer -->
+        <div class="identity-card reveal bg-white p-8 rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-rose-50/50 flex flex-col justify-center md:col-span-2 lg:col-span-3 transition-delay-100">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-rose-400 uppercase mb-3">Cosas que ama</span>
+          <div class="flex items-start gap-3">
+            <h3 class="font-serif text-2xl text-gray-800">Ama ver películas, escuchar música y preguntarse sobre el mundo y la vida. También le encanta molestarme… y a veces odiarme un poquito. Pero, sobre todo, ama todo lo que tiene que ver con el espacio.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN: PERSPECTIVA ================= -->
+  <section id="perspectiva" class="perspective-bg py-24 relative overflow-hidden">
+
+    <!-- Overlay del efecto Flash -->
+    <div id="flashEffect" class="flash-overlay"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+      <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+
+        <!-- Columna Izquierda: Texto Narrativo -->
+        <div class="w-full md:w-1/2 order-2 md:order-1 reveal">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight">
+            Déjenme mostrarles <br> <span class="italic text-rose-500">cómo la veo yo</span>
+          </h2>
+
+          <div class="space-y-6">
+            <p class="font-sans text-gray-600 text-lg leading-relaxed">
+              Dioooos, ella es literalmente la persona más inteligente, apasionada y dedicada que conozco. Todo lo que hace es increíble.
+            </p>
+
+            <p class="font-sans text-gray-600 text-lg leading-relaxed">
+              Me hace muuuuuuuy feliz poder hablar todos los días y pasar tiempo con ella.
+            </p>
+
+            <p class="font-sans text-gray-600 text-lg leading-relaxed border-l-4 border-rose-300 pl-4 italic">
+              Ella es demasiado para este mundo. Por eso me gusta.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen Estilo Instagram -->
+        <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center reveal">
+          <div class="relative bg-white p-4 rounded-3xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-500 max-w-sm">
+            <!-- Imagen Placeholder estilo "flowers/aesthetic" -->
+            <div class="rounded-2xl overflow-hidden aspect-square bg-rose-50 relative group">
+              <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=1000&auto=format&fit=crop" alt="Perspectiva floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <!-- Overlay sutil en la imagen -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-4 flex justify-between items-center px-2">
+              <span class="font-serif text-sm text-gray-400 italic">Así la veo yo</span>
+              <span class="text-rose-400 text-xl">♥</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NUEVA SECCIÓN: ESFERA DE INFLUENCIA ================= -->
+  <section id="esfera" class="sphere-section">
+
+    <!-- Transición Suave Superior -->
+    <div class="sphere-transition-top"></div>
+
+    <!-- Imagen de Fondo (Mapa) -->
+    <img src="https://imgur.com/EBkzf7R.png" alt="Mapa de influencia" class="sphere-bg-image">
+
+    <!-- Overlay Oscuro -->
+    <div class="sphere-overlay"></div>
+
+    <!-- Contenido -->
+    <div class="container mx-auto px-6 relative z-10 text-center reveal">
+
+      <p class="font-sans text-white/80 text-lg md:text-xl font-light mb-4 tracking-wide uppercase">
+        Quiero presentarles algo que me gusta llamar…
+      </p>
+
+      <h2 class="sphere-title-gradient font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-10 tracking-tight leading-tight drop-shadow-lg">
+        Su esfera de <br class="md:hidden"> influencia
+      </h2>
+
+      <div class="max-w-2xl mx-auto space-y-6">
+        <p class="font-sans text-white/90 text-xl md:text-2xl leading-relaxed font-light">
+          Su influencia llega más lejos de lo que muchos imaginan. Hay personas importantes para ella en partes <span class="italic font-serif text-rose-200">muuuuy</span> alejadas, como en Canadá.
+        </p>
+
+        <div class="w-24 h-px bg-white/30 mx-auto"></div>
+
+        <p class="font-serif text-white/90 text-xl md:text-2xl leading-relaxed italic">
+          Pero, al final, lo que más importa —al menos para mí— es la forma en que influye <span class="font-bold text-[#ffb7b2] drop-shadow-md">aquí</span>, cerca.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Transición Suave Inferior -->
+    <div class="sphere-transition-bottom"></div>
+
+  </section>
+
+  <!-- ================= SECCIÓN 3: PEQUEÑAS COSAS ================= -->
+  <section id="detalles" class="details-bg py-24 relative overflow-hidden">
+
+    <!-- Elementos flotantes decorativos para la nueva atmósfera -->
+    <div class="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full mix-blend-overlay filter blur-xl opacity-60 animate-pulse"></div>
+    <div class="absolute bottom-10 right-20 w-48 h-48 bg-blue-100 rounded-full mix-blend-overlay filter blur-xl opacity-60"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl relative z-10">
+
+      <!-- Título de la Sección -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+          Pequeñas cosas <br class="md:hidden"> <span class="italic text-purple-500">que dicen mucho</span>
+        </h2>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+
+        <!-- CARD 1: FRASE (Span 2 cols) -->
+        <div class="detail-card reveal bg-white/80 backdrop-blur-sm p-8 rounded-[2rem] shadow-sm border border-purple-50 flex flex-col justify-center md:col-span-2 lg:col-span-2 min-h-[200px]">
+          <span class="block font-sans text-xs font-bold tracking-[0.2em] text-purple-400 uppercase mb-4">Frase que siempre me dice</span>
+          <h3 class="font-serif text-2xl md:text-3xl text-gray-800 leading-snug italic">
+            "Si la vida fuera fácil no tendría sentido."
+          </h3>
+        </div>
+
+        <!-- CARD 2: EMOJI (Span 1 col) -->
+        <div class="detail-card reveal bg-white/80 backdrop-blur-sm p-6 rounded-[2rem] shadow-sm border border-purple-50 flex flex-col items-center justify-center text-center transition-delay-100 min-h-[200px]">
+          <div class="text-7xl mb-2 filter drop-shadow-lg">😐</div>
+          <p class="font-sans text-sm font-bold text-gray-500 mt-2">El emoji que más usa</p>
+          <p class="font-serif text-xs text-gray-400 italic">(Casi siempre porque hago alguna bobada 🙃)</p>
+        </div>
+
+        <!-- CARD 3: AUDIO (Span 1 col on LG, but needs to be tall or wide. Let's make it stand out) -->
+        <!-- Esta card ocupa 2 espacios en tablet/desktop para dar importancia a los números -->
+        <div class="detail-card reveal bg-gradient-to-br from-white to-purple-50 p-8 rounded-[2rem] shadow-lg border border-purple-100 flex flex-col justify-center items-center md:col-span-2 lg:col-span-2 row-span-1 transition-delay-200">
+
+          <div class="flex items-baseline gap-8 md:gap-16 mb-4">
+            <!-- Minutos -->
+            <div class="text-center">
+              <span class="audio-number block font-serif text-7xl md:text-8xl font-bold text-gray-800 leading-none">13</span>
+              <span class="block font-sans text-sm tracking-widest text-purple-400 uppercase mt-2">Minutos</span>
+            </div>
+
+            <!-- Divisor sutil -->
+            <div class="h-16 w-px bg-gray-300 opacity-50 rotate-12"></div>
+
+            <!-- Segundos -->
+            <div class="text-center">
+              <span class="audio-number block font-serif text-7xl md:text-8xl font-bold text-gray-800 leading-none">45</span>
+              <span class="block font-sans text-sm tracking-widest text-purple-400 uppercase mt-2">Segundos</span>
+            </div>
+          </div>
+
+          <div class="w-full h-px bg-purple-200 w-1/2 mx-auto my-4 opacity-50"></div>
+          <p class="font-serif italic text-gray-600 text-lg">"El audio más largo que le he mandado"</p>
+        </div>
+
+        <!-- CARD 4: PROYECTO COMPARTIDO (PDF Embed Placeholder) -->
+        <div class="detail-card reveal bg-white/90 p-6 rounded-[2rem] shadow-sm border border-purple-50 flex flex-col md:col-span-2 lg:col-span-4 min-h-[300px]">
+          <div class="flex flex-col md:flex-row gap-6 h-full">
+
+            <!-- Texto del proyecto -->
+            <div class="w-full md:w-1/3 flex flex-col justify-center">
+              <span class="block font-sans text-xs font-bold tracking-[0.2em] text-purple-400 uppercase mb-3">Proyecto</span>
+              <h3 class="font-serif text-2xl text-gray-800 mb-3">Nuestro Proyecto</h3>
+              <p class="font-sans text-gray-500 leading-relaxed mb-4">
+                Este documento es <span class="text-pink-500 font-medium italic">literalmente</span> la razón por la que nos conocimos.
+              </p>
+              <a href="#" class="inline-flex items-center text-sm font-bold text-purple-600 hover:text-purple-800 transition-colors">
+                Ver documento completo &rarr;
+              </a>
+            </div>
+
+            <!-- Embed Visual (Simulación para template) -->
+            <div class="w-full md:w-2/3 bg-gray-100 rounded-xl overflow-hidden border border-gray-200 relative group h-64 md:h-auto">
+              <!-- Aquí iría el iframe real: <iframe src="ruta/al/pdf.pdf" class="w-full h-full"></iframe> -->
+
+              <!-- Placeholder visual elegante -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 group-hover:bg-white transition-colors">
+                <svg class="w-16 h-16 text-gray-300 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="font-serif text-gray-400 group-hover:text-purple-500 transition-colors">Vista previa del PDF</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 4: TIEMPO Y DISTANCIA ================= -->
+  <section class="time-section-bg py-28 relative overflow-hidden">
+
+    <!-- Elementos decorativos (nubes abstractas) -->
+    <div class="absolute top-10 left-1/4 w-96 h-96 bg-white opacity-20 rounded-full blur-3xl mix-blend-overlay animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-indigo-200 opacity-20 rounded-full blur-3xl mix-blend-overlay"></div>
+
+    <div class="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+
+      <!-- Título Irónico -->
+      <div class="mb-16 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-700 mb-3">
+          Tiempo y distancia <br> <span class="italic font-light text-indigo-500 text-3xl md:text-4xl">(cosas que no ayudan)</span>
+        </h2>
+      </div>
+
+      <!-- CONTADOR -->
+      <div class="mb-20 reveal">
+        <p class="font-sans text-sm font-bold tracking-[0.2em] text-gray-500 uppercase mb-8">Tiempo desde que no me deja verla 😣</p>
+
+        <!-- Grid del Reloj -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
+
+          <!-- Días -->
+          <div class="time-box rounded-2xl p-6 flex flex-col justify-center items-center">
+            <span id="days" class="audio-number text-5xl md:text-6xl font-serif font-bold text-gray-800">00</span>
+            <span class="text-xs tracking-widest text-indigo-400 uppercase mt-2">Días</span>
+          </div>
+
+          <!-- Horas -->
+          <div class="time-box rounded-2xl p-6 flex flex-col justify-center items-center delay-100">
+            <span id="hours" class="audio-number text-5xl md:text-6xl font-serif font-bold text-gray-800">00</span>
+            <span class="text-xs tracking-widest text-indigo-400 uppercase mt-2">Horas</span>
+          </div>
+
+          <!-- Minutos -->
+          <div class="time-box rounded-2xl p-6 flex flex-col justify-center items-center delay-200">
+            <span id="minutes" class="audio-number text-5xl md:text-6xl font-serif font-bold text-gray-800">00</span>
+            <span class="text-xs tracking-widest text-indigo-400 uppercase mt-2">Minutos</span>
+          </div>
+
+          <!-- Segundos -->
+          <div class="time-box rounded-2xl p-6 flex flex-col justify-center items-center delay-300">
+            <span id="seconds" class="audio-number text-5xl md:text-6xl font-serif font-bold text-indigo-500">00</span>
+            <span class="text-xs tracking-widest text-indigo-400 uppercase mt-2">Segundos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISTANCIA -->
+      <div class="reveal">
+        <div class="inline-block relative">
+          <!-- Icono de mapa animado -->
+          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 text-3xl animate-bounce">📍</div>
+
+          <h3 class="font-serif text-6xl md:text-8xl font-bold text-gray-800/80 mb-2 audio-number">1038 <span class="text-3xl md:text-5xl">km</span></h3>
+          <div class="h-1 w-24 bg-indigo-300 mx-auto rounded-full mb-4"></div>
+          <p class="font-sans text-gray-500 text-lg">Distancia aproximada entre nosotros</p>
+          <p class="font-serif text-xs text-gray-400 italic mt-1">(Cartagena — Bogotá)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 5: NOTA AL MARGEN ================= -->
+  <section class="bonus-bg py-24 relative overflow-hidden flex items-center justify-center">
+
+    <div class="container mx-auto px-6 relative z-10">
+
+      <div class="max-w-xl mx-auto text-center reveal">
+
+        <!-- Título Casual -->
+        <h4 class="font-sans text-xs font-bold tracking-[0.3em] text-gray-400 uppercase mb-8">Pequeño dato</h4>
+
+        <!-- Card Juguetona -->
+        <div class="bonus-card rounded-3xl p-10 md:p-12 transform rotate-1">
+
+          <p class="font-serif text-2xl md:text-3xl text-gray-800 leading-normal mb-6">
+            Sí, se ve muy bonita (como siempre) en la foto de su playlist de Spotify.
+          </p>
+
+          <div class="w-16 h-px bg-gray-300 mx-auto my-6 opacity-50"></div>
+
+          <p class="font-sans text-gray-500 italic text-sm md:text-base">
+            Pero si ella pregunta... <br>
+            <span class="font-semibold text-rose-400">yo no dije eso.</span> 🤫
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 6: GUSTOS MUSICALES ================= -->
+  <section id="musica" class="music-bg py-24 relative overflow-hidden">
+
+    <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
+
+      <!-- Título de la Sección -->
+      <div class="mb-12 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Sus gustos musicales 🎶
+        </h2>
+      </div>
+
+      <!-- Embed Container -->
+      <div class="reveal bg-white p-4 md:p-6 rounded-[2rem] shadow-xl border border-purple-50 relative z-10">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Xyo502Rw8vXeNHxktWZUb?utm_source=generator" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+      <!-- Botón de Redirección -->
+      <div class="mt-10 reveal">
+        <a href="https://open.spotify.com/playlist/6Xyo502Rw8vXeNHxktWZUb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-full font-sans font-bold shadow-lg hover:bg-[#1DB954] hover:shadow-green-500/30 hover:scale-105 transition-all duration-300">
+          <span>Abrir playlist completa</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 7: PELÍCULAS FAVORITAS ================= -->
+  <section id="peliculas" class="movies-bg py-24 relative overflow-hidden">
+
+    <div class="container mx-auto px-6 relative z-10">
+
+      <!-- Título -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-2">
+          Sus películas favoritas 🎬
+        </h2>
+        <p class="font-sans text-purple-200/70 text-lg font-light">Algunas historias que siempre la acompañan</p>
+      </div>
+
+      <!-- Carrusel 3D -->
+      <div class="relative max-w-5xl mx-auto h-[500px] flex items-center justify-center perspective-1000 reveal">
+
+        <!-- Contenedor de Cards -->
+        <div id="movie-carousel" class="relative w-full h-full flex items-center justify-center">
+          <!-- Cards inyectadas por JS -->
+        </div>
+
+        <!-- Controles discretos (opcional si es automático) -->
+        <button id="prevMovie" class="absolute left-4 z-30 p-3 bg-white/10 rounded-full hover:bg-white/20 text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="nextMovie" class="absolute right-4 z-30 p-3 bg-white/10 rounded-full hover:bg-white/20 text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 8: RECUERDOS (NUEVA) ================= -->
+  <section id="recuerdos" class="memories-bg py-24 relative overflow-hidden">
+
+    <div class="container mx-auto px-6 relative z-10">
+
+      <!-- Título de la Sección -->
+      <div class="text-center mb-24 reveal">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+          Momentos que hemos <br class="md:hidden"> <span class="italic text-rose-500">pasado juntos</span>
+        </h2>
+      </div>
+
+      <!-- Contenedor de Fotos "Scrapbook" -->
+      <div class="flex flex-col gap-12 md:gap-24 max-w-3xl mx-auto mb-20">
+
+        <!-- Foto 1 (Izquierda, rotada suave) -->
+        <div class="polaroid-wrapper self-start transform -rotate-3 hover:rotate-0 w-full max-w-xs md:max-w-sm reveal">
+          <div class="bg-white p-4 pb-12 shadow-2xl rounded-sm">
+            <div class="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1000&auto=format&fit=crop" alt="Momento compartido" class="w-full h-full object-cover filter sepia-[0.1] contrast-[0.9]">
+            </div>
+            <p class="font-serif text-gray-400 text-center mt-6 text-sm italic tracking-widest">Un café pendiente</p>
+          </div>
+        </div>
+
+        <!-- Foto 2 (Derecha, rotada opuesta, margen negativo para superposición visual) -->
+        <div class="polaroid-wrapper self-end transform rotate-2 hover:rotate-0 w-full max-w-xs md:max-w-sm -mt-16 md:-mt-32 reveal transition-delay-100">
+          <div class="bg-white p-4 pb-12 shadow-2xl rounded-sm">
+            <div class="w-full aspect-square bg-gray-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=1000&auto=format&fit=crop" alt="Paisaje" class="w-full h-full object-cover filter contrast-[0.9]">
+            </div>
+            <p class="font-serif text-gray-400 text-center mt-6 text-sm italic tracking-widest">El atardecer aquel día</p>
+          </div>
+        </div>
+
+        <!-- Foto 3 (Centro/Izquierda, rotada suave) -->
+        <div class="polaroid-wrapper self-center md:self-start transform -rotate-1 hover:rotate-0 w-full max-w-xs md:max-w-sm -mt-12 md:-mt-24 reveal transition-delay-200">
+          <div class="bg-white p-4 pb-12 shadow-2xl rounded-sm">
+            <div class="w-full aspect-[4/3] bg-gray-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=1000&auto=format&fit=crop" alt="Sombra" class="w-full h-full object-cover filter grayscale-[0.2]">
+            </div>
+            <p class="font-serif text-gray-400 text-center mt-6 text-sm italic tracking-widest">Pequeños instantes</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Texto Final -->
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <p class="font-sans text-gray-600 text-lg md:text-xl leading-relaxed italic">
+          El único problema es que casi no tenemos fotos, porque además de que vive lejos, no me colabora mucho tomando fotos cuando nos vemos 🥺.”
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 9: RESPIRO (NUEVA) ================= -->
+  <section class="breath-bg py-32 md:py-40 flex items-center justify-center">
+    <div class="container mx-auto px-6 text-center reveal">
+      <p class="font-serif text-2xl md:text-4xl text-gray-400 font-light italic tracking-wide leading-relaxed">
+        Si llegaste hasta aquí, ya conoces bastante de ella.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 10: CIERRE FINAL ================= -->
+  <section id="cierre" class="closing-bg pt-24 pb-12 md:pt-32 relative overflow-hidden">
+
+    <div class="container mx-auto px-6 max-w-4xl relative z-10 flex flex-col items-center">
+
+      <!-- Imagen Principal de Cierre -->
+      <div class="w-full max-w-2xl mb-16 reveal">
+        <div class="final-image-container relative aspect-[16/10] md:aspect-[21/9] rounded-[2.5rem] overflow-hidden bg-white border-8 border-white">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1470&auto=format&fit=crop" alt="Final del viaje" class="w-full h-full object-cover filter brightness-105">
+          <!-- Overlay sutil -->
+          <div class="absolute inset-0 bg-gradient-to-t from-rose-100/20 to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- Texto de Cierre Honestidad -->
+      <div class="text-center max-w-2xl reveal">
+        <p class="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-snug font-medium mb-8">
+          Pero lo que más quiero que sepan es que es una de las personas <span class="text-rose-400 italic">más importantes</span> en mi vida.
+        </p>
+
+        <div class="w-12 h-px bg-rose-200 mx-auto mb-8"></div>
+
+        <p class="font-sans text-lg md:text-xl text-gray-500 leading-relaxed tracking-wide">
+          La quiero muchísimo, y estar cerca de ella <br class="hidden md:block"> siempre va a ser algo que deseo.
+        </p>
+      </div>
+
+      <!-- Crédito Minimalista -->
+      <div class="mt-20 opacity-60 reveal">
+        <p class="font-serif italic text-gray-400 text-sm tracking-widest uppercase">
+          Para Sara
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PIE DE PÁGINA FINAL (MEJORADO) ================= -->
+  <footer class="final-footer-bg py-32 flex items-center justify-center">
+    <div class="reveal">
+      <p class="font-sans text-pink-300 text-lg md:text-2xl tracking-[0.3em] font-light">
+        Continuará…
+      </p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

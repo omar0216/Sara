@@ -1,0 +1,422 @@
+/* --- Estilos --- */
+/* Tipografía */
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+.font-sans {
+  font-family: "Lato", sans-serif;
+}
+
+/* --- SECCIÓN 1: HERO --- */
+.hero-bg {
+  background: linear-gradient(-45deg, #fff0f5, #ffe4e1, #fff5ee, #f8c8dc);
+  background-size: 400% 400%;
+  animation: gradientBreathing 18s ease infinite;
+}
+
+/* --- SECCIÓN: PERSPECTIVA --- */
+.perspective-bg {
+  background: linear-gradient(
+    135deg,
+    #fffaf0,
+    /* Floral White */ #fdf5e6,
+    /* Old Lace */ #fff0f5 /* Lavender Blush muy suave */
+  );
+  position: relative;
+}
+
+.flash-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+  transition: opacity 0.6s ease-out;
+}
+
+.flash-active {
+  opacity: 0.8;
+}
+
+/* --- SECCIÓN: ESFERA DE INFLUENCIA --- */
+.sphere-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura completa */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sphere-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center; /* Desktop por defecto */
+  z-index: 0;
+  animation: subtleZoom 30s ease-in-out infinite alternate;
+}
+
+/* En móvil enfocamos a América (izquierda) */
+@media (max-width: 768px) {
+  .sphere-bg-image {
+    object-position: 25% center;
+  }
+}
+
+.sphere-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+/* Título Épico con Gradiente */
+.sphere-title-gradient {
+  background: linear-gradient(
+    to right,
+    #e0c3fc,
+    #ff9a9e
+  ); /* Lila a Rosa suave */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(224, 195, 252, 0.3); /* Glow sutil */
+}
+
+/* Transiciones Suaves (Bordes) */
+.sphere-transition-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, #fff0f5 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.sphere-transition-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #f3e7ff 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* --- SECCIÓN 3: DETALLES --- */
+.details-bg {
+  background: linear-gradient(120deg, #f3e7ff, #ffe4e1, #e0f7fa, #f3e7ff);
+  background-size: 300% 300%;
+  animation: dreamFlow 20s ease infinite alternate;
+}
+
+/* --- SECCIÓN 4: TIEMPO Y DISTANCIA --- */
+.time-section-bg {
+  background: linear-gradient(
+    180deg,
+    #eef2ff,
+    /* Indigo muy suave */ #e0e7ff,
+    /* Indigo suave */ #f3e8ff,
+    /* Lila suave */ #fae8ff /* Rosa frio muy suave */
+  );
+  background-size: 200% 200%;
+  animation: timePassage 25s ease infinite alternate;
+}
+
+/* --- SECCIÓN 5: NOTA AL MARGEN --- */
+.bonus-bg {
+  background: linear-gradient(
+    135deg,
+    #fff5e6,
+    /* Crema melocotón */ #fff0f5,
+    /* Lavanda muy pálido */ #ffe4e1 /* Rosa niebla */
+  );
+  background-size: 200% 200%;
+  animation: warmGlow 15s ease infinite alternate;
+}
+
+/* --- SECCIÓN 6: MÚSICA --- */
+.music-bg {
+  background: linear-gradient(
+    to bottom right,
+    #fff0f5,
+    /* Lavender Blush */ #f3e5f5,
+    /* Purple 50 */ #fce4ec /* Pink 50 */
+  );
+  background-size: 200% 200%;
+  animation: musicFlow 20s ease infinite alternate;
+}
+
+/* --- SECCIÓN 7: PELÍCULAS --- */
+.movies-bg {
+  background: radial-gradient(circle at center, #2e1a2e 0%, #120812 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-card {
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+
+.movie-card.active {
+  transform: scale(1.1) translateY(0);
+  z-index: 20;
+  opacity: 1;
+  filter: drop-shadow(0 20px 40px rgba(224, 195, 252, 0.2));
+}
+
+.movie-card.prev,
+.movie-card.next {
+  transform: scale(0.85) translateY(10px);
+  z-index: 10;
+  opacity: 0.5;
+  filter: blur(2px) grayscale(40%);
+}
+
+.movie-poster {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- SECCIÓN 8: RECUERDOS (NUEVA) --- */
+.memories-bg {
+  background-color: #fffdf5; /* Crema muy suave */
+  background-image: radial-gradient(#f0e6d2 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.polaroid-wrapper {
+  transition: transform 0.4s ease;
+}
+.polaroid-wrapper:hover {
+  transform: scale(1.02) translateY(-5px);
+  z-index: 10;
+}
+
+/* --- SECCIÓN 9: RESPIRO --- */
+.breath-bg {
+  background: #faf9f6; /* Off-white muy limpio */
+}
+
+/* --- SECCIÓN 10: CIERRE (NUEVA) --- */
+.closing-bg {
+  background: linear-gradient(to bottom, #faf9f6 0%, #fff0f5 100%);
+}
+
+/* --- FOOTER FINAL --- */
+.final-footer-bg {
+  background: linear-gradient(to bottom, #fff0f5 0%, #fffbf0 100%);
+}
+
+.final-image-container {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ANIMACIONES KEYFRAMES --- */
+@keyframes gradientBreathing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes dreamFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes timePassage {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes warmGlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes musicFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* --- ANIMACIONES GENERALES --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.2s;
+}
+.delay-200 {
+  animation-delay: 0.4s;
+}
+.delay-300 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- COMPONENTES --- */
+.image-container {
+  transition: transform 0.5s ease;
+}
+.image-container:hover {
+  transform: translateY(-5px);
+}
+
+.image-glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 28px;
+  background: linear-gradient(
+    45deg,
+    #ffb7b2,
+    #ffdac1,
+    #e2f0cb,
+    #b5ead7,
+    #ff9aa2
+  );
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.7;
+  background-size: 300% 300%;
+  animation: borderFlow 8s ease infinite alternate;
+}
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(18px);
+  }
+  100% {
+    background-position: 100% 50%;
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+}
+
+/* Cards Estilo Base */
+.identity-card,
+.detail-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.identity-card:hover,
+.detail-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.08);
+}
+
+.bonus-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 35px -5px rgba(255, 160, 122, 0.15);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bonus-card:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.audio-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  transition: transform 0.3s ease;
+}
+.time-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg,
+  .details-bg,
+  .time-section-bg,
+  .bonus-bg,
+  .music-bg,
+  .movies-bg,
+  .image-glow,
+  .fade-in-up,
+  .reveal,
+  .sphere-bg-image {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
