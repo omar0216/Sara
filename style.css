@@ -64,7 +64,7 @@
 /* En móvil enfocamos a América (izquierda) */
 @media (max-width: 768px) {
   .sphere-bg-image {
-    object-position: 15% center;
+    object-position: 2% center;
   }
 }
 
