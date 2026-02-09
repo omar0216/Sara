@@ -7,7 +7,7 @@
   font-family: "Lato", sans-serif;
 }
 
-/* --- SECCIÓN 1: HERO --- */
+/* --- SECCIÓN: HERO --- */
 .hero-bg {
   background: linear-gradient(-45deg, #fff0f5, #ffe4e1, #fff5ee, #f8c8dc);
   background-size: 400% 400%;
@@ -19,8 +19,8 @@
   background: linear-gradient(
     135deg,
     #fffaf0,
-    /* Floral White */ #fdf5e6,
-    /* Old Lace */ #fff0f5 /* Lavender Blush muy suave */
+    #fdf5e6,
+    #fff0f5
   );
   position: relative;
 }
@@ -57,12 +57,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center; /* Desktop por defecto */
+  object-position: center center;
   z-index: 0;
   animation: subtleZoom 30s ease-in-out infinite alternate;
 }
 
-/* En móvil enfocamos a América (izquierda) */
 @media (max-width: 768px) {
   .sphere-bg-image {
     object-position: 5% center;
@@ -80,20 +79,18 @@
   z-index: 1;
 }
 
-/* Título Épico con Gradiente */
 .sphere-title-gradient {
   background: linear-gradient(
     to right,
     #e0c3fc,
     #ff9a9e
-  ); /* Lila a Rosa suave */
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 40px rgba(224, 195, 252, 0.3); /* Glow sutil */
+  text-shadow: 0 0 40px rgba(224, 195, 252, 0.3);
 }
 
-/* Transiciones Suaves (Bordes) */
 .sphere-transition-top {
   position: absolute;
   top: 0;
@@ -116,51 +113,51 @@
   pointer-events: none;
 }
 
-/* --- SECCIÓN 3: DETALLES --- */
+/* --- SECCIÓN: DETALLES --- */
 .details-bg {
   background: linear-gradient(120deg, #f3e7ff, #ffe4e1, #e0f7fa, #f3e7ff);
   background-size: 300% 300%;
   animation: dreamFlow 20s ease infinite alternate;
 }
 
-/* --- SECCIÓN 4: TIEMPO Y DISTANCIA --- */
+/* --- SECCIÓN: TIEMPO Y DISTANCIA --- */
 .time-section-bg {
   background: linear-gradient(
     180deg,
     #eef2ff,
-    /* Indigo muy suave */ #e0e7ff,
-    /* Indigo suave */ #f3e8ff,
-    /* Lila suave */ #fae8ff /* Rosa frio muy suave */
+    #e0e7ff,
+    #f3e8ff,
+    #fae8ff
   );
   background-size: 200% 200%;
   animation: timePassage 25s ease infinite alternate;
 }
 
-/* --- SECCIÓN 5: NOTA AL MARGEN --- */
+/* --- SECCIÓN: NOTA --- */
 .bonus-bg {
   background: linear-gradient(
     135deg,
     #fff5e6,
-    /* Crema melocotón */ #fff0f5,
-    /* Lavanda muy pálido */ #ffe4e1 /* Rosa niebla */
+    #fff0f5,
+    #ffe4e1
   );
   background-size: 200% 200%;
   animation: warmGlow 15s ease infinite alternate;
 }
 
-/* --- SECCIÓN 6: MÚSICA --- */
+/* --- SECCIÓN: MÚSICA --- */
 .music-bg {
   background: linear-gradient(
     to bottom right,
     #fff0f5,
-    /* Lavender Blush */ #f3e5f5,
-    /* Purple 50 */ #fce4ec /* Pink 50 */
+    #f3e5f5,
+    #fce4ec
   );
   background-size: 200% 200%;
   animation: musicFlow 20s ease infinite alternate;
 }
 
-/* --- SECCIÓN 7: PELÍCULAS --- */
+/* --- SECCIÓN: PELÍCULAS --- */
 .movies-bg {
   background: radial-gradient(circle at center, #2e1a2e 0%, #120812 100%);
   color: #fff;
@@ -192,9 +189,90 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* --- SECCIÓN 8: RECUERDOS (NUEVA) --- */
+/* --- SECCIÓN: HIJITOS --- */
+.kids-bg {
+  background: linear-gradient(
+    120deg,
+    #fff1f2,
+    #ffe4e6,
+    #fce7f3,
+    #fff0f5
+  );
+  background-size: 300% 300%;
+  animation: gradientGaming 20s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientGaming {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.kids-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(244, 114, 182, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(244, 114, 182, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.game-card {
+  background: rgba(60, 20, 30, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px -10px rgba(157, 23, 77, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.game-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px -10px rgba(244, 114, 182, 0.4);
+  border-color: rgba(252, 231, 243, 0.8);
+}
+
+.hp-bar-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hp-bar-fill {
+  background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  box-shadow: 0 0 10px rgba(255, 154, 158, 0.7);
+  animation: pulseHP 2s infinite;
+}
+
+@keyframes pulseHP {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* --- SECCIÓN: RECUERDOS --- */
 .memories-bg {
-  background-color: #fffdf5; /* Crema muy suave */
+  background-color: #fffdf5;
   background-image: radial-gradient(#f0e6d2 1px, transparent 1px);
   background-size: 20px 20px;
 }
@@ -207,12 +285,12 @@
   z-index: 10;
 }
 
-/* --- SECCIÓN 9: RESPIRO --- */
+/* --- SECCIÓN: PENÚLTIMA --- */
 .breath-bg {
-  background: #faf9f6; /* Off-white muy limpio */
+  background: #faf9f6;
 }
 
-/* --- SECCIÓN 10: CIERRE (NUEVA) --- */
+/* --- SECCIÓN: CIERRE --- */
 .closing-bg {
   background: linear-gradient(to bottom, #faf9f6 0%, #fff0f5 100%);
 }
@@ -308,7 +386,6 @@
   }
 }
 
-/* Scroll Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
