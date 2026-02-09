@@ -137,14 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         className += " prev z-20 opacity-60 grayscale-[50%] blur-[1px]";
         style =
-          "left: 30%; transform: translateX(-50%) scale(0.85) perspective(1000px) rotateY(15deg);";
+          "left: 30%; transform: translateX(-50%) scale(0.85) perspective(1000px) rotateY(-15deg);";
       } else if (
         offset === 1 ||
         (activeIndex === movies.length - 1 && index === 0)
       ) {
         className += " next z-20 opacity-60 grayscale-[50%] blur-[1px]";
         style =
-          "left: 70%; transform: translateX(-50%) scale(0.85) perspective(1000px) rotateY(-15deg);";
+          "left: 70%; transform: translateX(-50%) scale(0.85) perspective(1000px) rotateY(15deg);";
       } else {
         className += " z-10 opacity-0";
         style =
