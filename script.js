@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ================= LÓGICA EXISTENTE =================
   const hero = document.querySelector(".hero-section");
   const imageContainer = document.querySelector(".image-container");
   hero.addEventListener("mousemove", (e) => {
@@ -204,4 +203,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   renderCarousel();
   window.addEventListener("resize", renderCarousel);
+
+  // ================= LÓGICA DE CONTADORES HIJITOS =================
+  const funkoDate = new Date("2025-10-18T08:00-05:00").getTime();
+  const leonDate = new Date("2025-12-02T12:00-05:00").getTime();
+  const lagartijaDate = new Date("2025-12-21T21:00-05:00").getTime();
+
+  function updatePetCounters() {
+    const now = new Date().getTime();
+
+    const updateSingleCounter = (startDate, elementId) => {
+      const diff = now - startDate;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById(elementId).innerText = `${d}d ${h}h ${m}m ${s}s`;
+    };
+
+    updateSingleCounter(funkoDate, "timer-funko");
+    updateSingleCounter(leonDate, "timer-leon");
+    updateSingleCounter(lagartijaDate, "timer-lagartija");
+  }
+
+  setInterval(updatePetCounters, 1000);
+  updatePetCounters();
 });
