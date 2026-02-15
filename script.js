@@ -154,10 +154,10 @@ document.addEventListener("DOMContentLoaded", () => {
           style = "left: 50%; transform: translateX(-50%) scale(1);";
         else if (offset === -1)
           style =
-            "left: 15%; transform: translateX(-50%) scale(0.8) opacity(0.5);";
+            "left: 15%; transform: translateX(-50%) scale(0.8); opacity(0.5);";
         else if (offset === 1)
           style =
-            "left: 85%; transform: translateX(-50%) scale(0.8) opacity(0.5);";
+            "left: 85%; transform: translateX(-50%) scale(0.8); opacity(0.5);";
       }
       card.className = className;
       card.style = style;
